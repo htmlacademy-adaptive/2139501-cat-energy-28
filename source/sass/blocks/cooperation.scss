@@ -1,0 +1,19 @@
+.cooperation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 20px;
+}
+
+.cooperation__title {
+  margin-right: 2px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-text-additional;
+}
+
+.cooperation__text {
+  line-height: 20px;
+}

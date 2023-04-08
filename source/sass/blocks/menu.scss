@@ -1,0 +1,12 @@
+.menu {
+  @include list-reset;
+}
+
+.menu__link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-text-main;
+  text-decoration: none;
+  text-transform: uppercase;
+}
