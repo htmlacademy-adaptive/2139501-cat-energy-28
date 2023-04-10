@@ -37,7 +37,7 @@
   &--more {
     position: relative;
     margin-bottom: 10px;
-    color: $color-text-special;
+    color: $color-text-additional;
     text-align: center;
 
     &::before {
@@ -47,13 +47,14 @@
       width: 30px;
       height: 30px;
       margin: 0 auto 24px;
-      background-image: url("../../img/icons/plus.svg");
+      background-image: url("../img/icons/plus.svg");
     }
   }
 }
 
 .card__text {
   &--more {
+    font-family: $font-secondary;
     margin: 0;
     font-size: 12px;
     line-height: 16px;

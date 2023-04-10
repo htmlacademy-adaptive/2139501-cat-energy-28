@@ -21,7 +21,7 @@
     padding-top: 23px;
   }
 
-  &--additional {
+  &--checkbox {
     padding-top: 22px;
     padding-bottom: 34px;
   }
@@ -35,7 +35,7 @@
     margin-bottom: 38px;
   }
 
-  &--additional {
+  &--checkbox {
     margin-bottom: 34px;
   }
 }
@@ -54,6 +54,15 @@
   line-height: 18px;
   font-weight: 400;
   color: $color-text-description;
+  text-transform: uppercase;
+
+  &--radio {
+    color: $color-text-special;
+  }
+
+  &--checkbox {
+    color: $color-text-main;
+  }
 }
 
 .form__button-wrapper {
@@ -63,8 +72,20 @@
 
 .form__submit-button {
   margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .form__notification {
   line-height: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-text-description;
+  text-transform: uppercase;
 }
