@@ -1,0 +1,17 @@
+.main-header {
+  background-color: $color-bg-main;
+  padding-top: 10px;
+  padding-bottom: 17px;
+}
+
+.main-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-header__logo {
+  display: block;
+  width: 191px;
+  height: 38px;
+}

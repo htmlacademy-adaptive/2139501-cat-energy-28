@@ -1,0 +1,62 @@
+.living-example__container {
+  padding: 25px 20px 40px;
+  background-color: $color-bg-additional;
+}
+
+.living-example__title {
+  margin-bottom: 40px;
+}
+
+.living-example__text {
+  margin-bottom: 20px;
+}
+
+.living-example__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.living-example__item {
+  position: relative;
+  max-width: 124px;
+  width: 50%;
+  padding: 14px 17px;
+  text-align: center;
+  border: 1px solid $color-border-secondary;
+  border-radius: 3px;
+}
+
+.living-example__subtitle {
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-text-main;
+}
+
+.living-example__description {
+  position: absolute;
+  display: block;
+  width: 60%;
+  padding: 0;
+  top: 45px;
+  left: 24px;
+  font-family: $font-secondary;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $color-text-description;
+  text-align: center;
+  background-color: $color-bg-additional;
+}
+
+.living-example__cost {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-main;
+  text-align: center;
+  text-transform: uppercase;
+}
