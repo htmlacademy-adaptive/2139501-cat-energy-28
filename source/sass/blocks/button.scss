@@ -12,4 +12,11 @@
   font-family: $font-main;
   background-color: $color-bg-special;
   border: none;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+    width: fit-content;
+  }
 }

@@ -1,6 +1,15 @@
 .page__body {
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
   font-weight: 400;
   font-family: $font-main;
+
+  @media (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1440px;
+  }
 }

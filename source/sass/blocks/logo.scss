@@ -1,0 +1,35 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    min-height: 54px;
+  }
+}
+
+.logo__image,
+.logo__text {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.logo__text {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.logo__image {
+  @media (min-width: $tablet) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+    height: 59px;
+  }
+}

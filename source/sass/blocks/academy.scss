@@ -4,6 +4,11 @@
   align-items: center;
   width: 100%;
   padding-top: 20px;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-end;
+    padding: 0;
+  }
 }
 
 .academy__link {
@@ -14,6 +19,12 @@
   font-weight: 400;
   color: $color-text-description;
   text-decoration: none;
+}
+
+.academy__logo {
+  @media (min-width: $tablet) {
+    margin-left: 28px;
+  }
 }
 
 .academy__icon {

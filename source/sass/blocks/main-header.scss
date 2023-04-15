@@ -1,13 +1,23 @@
 .main-header {
   background-color: $color-bg-main;
-  padding-top: 10px;
-  padding-bottom: 17px;
 }
 
 .main-header__container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  padding: 10px 20px 17px;
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+    min-height: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 110px;
+    min-height: 112px;
+  }
 }
 
 .main-header__logo {

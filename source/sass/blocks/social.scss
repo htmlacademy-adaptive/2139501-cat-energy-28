@@ -6,6 +6,11 @@
   justify-content: center;
   border-top: 1px solid $color-border;
   border-bottom: 1px solid $color-border;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .social__item {

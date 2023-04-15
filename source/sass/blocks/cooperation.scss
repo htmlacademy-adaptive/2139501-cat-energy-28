@@ -1,20 +1,57 @@
+.cooperation {
+  width: 100%;
+}
+
 .cooperation__container {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 26px 20px;
+  background-color: $color-bg-main;
+
+  &--inner {
+    background-color: $color-bg-secondary;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    width: 565px;
+    margin-top: 95px;
+    padding: 56px 60px 56px 80px;
+    left: 110px;
+    z-index: 1;
+  }
 }
 
 .cooperation__title {
-  margin-right: 2px;
+  margin: 0 15px 0 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: $color-text-additional;
+
+  @media (min-width: $tablet) {
+    max-width: 171px;
+    margin-right: 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .cooperation__text {
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 160px;
+    min-height: 80px;
+    text-align: right;
+  }
 }

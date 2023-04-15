@@ -1,12 +1,51 @@
 .menu {
   @include list-reset;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 440px;
+  }
+}
+
+.menu__item {
+  @media (min-width: $tablet) {
+    padding-bottom: 10px;
+
+    &--current {
+      border-bottom: 2px solid $color-border-special;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 10px;
+
+    &--current {
+      border-bottom: 2px solid $color-border-main;
+    }
+  }
 }
 
 .menu__link {
+  display: block;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
   color: $color-text-main;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-text-secondary;
+  }
 }

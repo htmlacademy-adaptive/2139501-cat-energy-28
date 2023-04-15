@@ -2,13 +2,40 @@
   padding: 27px 0 0;
   border-top: 1px solid $color-border;
   border-bottom: 1px solid $color-border;
+
+  @media (min-width: $tablet) {
+    padding: 65px 30px 68px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 78px 110px 75px;
+  }
 }
 
 .catalog__title {
   color: $color-text-main;
+  margin-left: 20px;
   margin-bottom: 41px;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    margin-bottom: 163px;
+  }
 }
 
 .catalog__list {
   @include list-reset;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 141px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 143px 80px;
+  }
 }
