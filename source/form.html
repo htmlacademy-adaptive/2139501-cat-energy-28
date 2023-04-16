@@ -39,58 +39,62 @@
       <section class="form-block">
         <div class="form-block__container">
           <h1 class="title title--h1 form-block__title">Подбор программы</h1>
-          <p class="text form-block__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <p class="text form-block__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         </div>
         <form class="form-block__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-          <div class="form__wrapper form__wrapper--data">
-            <h2 class="visually-hidden">Информация о коте</h2>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-name">Имя:*</label>
-                <input class="form__control form__control--text" id="cat-name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
-                <input class="form__control form__control--text" id="cat-weight" type="number" name="weight" placeholder="7" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-age">Возраст (лет):*</label>
-                <input class="form__control form__control--text" id="cat-age" type="number"  name="age" placeholder="7">
-              </li>
-            </ul>
-          </div>
+          <div class="form__container">
 
-          <div class="form__wrapper form__wrapper--target">
-            <h2 class="visually-hidden">Цель программы</h2>
-            <ul class="form__list form__list--target">
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Похудение" checked>
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Похудение</span>
-                </label>
-              </li>
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Набор массы">
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Набор массы</span>
-                </label>
-              </li>
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
+            <div class="form__wrapper form__wrapper--data">
+              <h2 class="visually-hidden">Информация о коте</h2>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-name">Имя:*</label>
+                  <input class="form__control form__control--text" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
+                  <input class="form__control form__control--text" id="cat-weight" type="number" name="weight" placeholder="7" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-age">Возраст (лет):*</label>
+                  <input class="form__control form__control--text" id="cat-age" type="number"  name="age" placeholder="7">
+                </li>
+              </ul>
+            </div>
+
+            <div class="form__wrapper form__wrapper--target">
+              <h2 class="visually-hidden">Цель программы</h2>
+              <ul class="form__list form__list--target">
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Похудение" checked>
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Набор массы">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
           </div>
 
           <div class="form__wrapper form__wrapper--contacts">
             <h2 class="title title--h3 form__title">Контактные данные (владельца кота)</h2>
-            <ul class="form__list">
+            <ul class="form__list form__list--contacts">
               <li class="form__item">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
                 <input class="form__control form__control--text" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -109,7 +113,7 @@
 
           <div class="form__wrapper form__wrapper--checkbox">
             <h2 class="title title--h3 form__title form__title--checkbox">Дополнительно</h2>
-            <ul class="form__list">
+            <ul class="form__list form__list--checkbox">
               <li class="form__field form__field--checkbox">
                 <label class="form__label form__label--checkbox">
                   <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>

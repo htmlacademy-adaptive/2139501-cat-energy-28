@@ -111,6 +111,10 @@
     transform: translateX(-50%);
     white-space: nowrap;
   }
+
+  @media (min-width: $desktop) {
+    top: 72px;
+  }
 }
 
 .living-example__cost {
