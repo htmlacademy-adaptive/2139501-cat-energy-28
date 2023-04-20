@@ -4,6 +4,8 @@
   border: none;
 
   @media (min-width: $tablet) {
+    width: 630px;
+    margin: 0 auto;
     padding: 0 70px;
   }
 
@@ -20,6 +22,7 @@
     }
 
     @media (min-width: $desktop) {
+      width: 569px;
       margin-bottom: 0;
     }
   }
@@ -33,10 +36,17 @@
       padding: 25px 28px;
       border: 1px solid $color-border-form;
     }
+
+    @media (min-width: $desktop) {
+      width: 568px;
+      min-height: 196px;
+      margin-bottom: 0;
+    }
   }
 
   &--contacts {
-    padding-top: 26px;
+    width: 100%;
+    padding: 38px 0 0;
 
     @media (min-width: $tablet) {
       padding-top: 75px;
@@ -48,7 +58,8 @@
   }
 
   &--comment {
-    padding-top: 23px;
+    width: 100%;
+    padding: 35px 0 0;
 
     @media (min-width: $tablet) {
       padding-top: 65px;
@@ -60,8 +71,8 @@
   }
 
   &--checkbox {
-    padding-top: 22px;
-    padding-bottom: 34px;
+    width: 100%;
+    padding: 34px 0 34px;
 
     @media (min-width: $tablet) {
       padding-top: 65px;
@@ -70,13 +81,14 @@
 
     @media (min-width: $desktop) {
       padding-top: 67px;
-      padding-bottom: 61px;
+      padding-bottom: 82px;
     }
   }
 }
 
 .form__container {
   @media (min-width: $tablet) {
+    width: 100%;
     padding: 0 67px 0 71px;
   }
 
@@ -85,28 +97,67 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
-    padding: 0 110px 0 111px;
+    max-width: 1217px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.form__title-wrapper {
+  border-top: 2px solid $color-border-special;
+}
+
+.form__title-container {
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    max-width: 768px;
+    padding: 0 50px 0 49px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    padding: 0 90px 0 89px;
   }
 }
 
 .form__title {
+  position: relative;
+  display: inline-block;
   margin-bottom: 35px;
-  line-height: 26px;
+  padding-left: 20px;
+  padding-right: 21px;
+  line-height: 36px;
+  background-color: $color-bg-main;
+  transform: translateY(-50%);
 
   @media (min-width: $tablet) {
     margin-bottom: 76px;
   }
 
-  &--comment {
-    margin-bottom: 38px;
+  &--contacts {
+    max-width: 225px;
+    margin-bottom: 23px;
+    transform: translateY(-37%);
 
     @media (min-width: $tablet) {
-      margin-bottom: 76px;
+      max-width: unset;
+      margin-bottom: 58px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--comment {
+    margin-bottom: 26px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 58px;
     }
   }
 
   &--checkbox {
-    margin-bottom: 34px;
+    margin-bottom: 22px;
 
     @media (min-width: $tablet) {
       margin-bottom: 57px;
@@ -114,29 +165,71 @@
   }
 }
 
+.form__list-container {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}
+
+.form__list-wrapper {
+  @media (min-width: $tablet) {
+    max-width: 533px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: unset;
+  }
+}
+
 .form__list {
   @include list-reset;
+  max-width: 280px;
+  margin: 0 auto;
 
-  &--target {
-    padding: 0 20px;
+  @media (min-width: $tablet) {
+    max-width: 100%;
   }
 
   &--contacts {
+    @media (min-width: $tablet) {
+      max-width: 630px;
+      margin: 0 auto;
+    }
+
     @media (min-width: $desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 78px;
+      max-width: 1220px;
     }
   }
 
   &--checkbox {
     display: flex;
     flex-direction: column;
+    margin-bottom: 34px;
 
     @media (min-width: $tablet) {
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 0;
+      margin-bottom: 61px;
     }
   }
 }
@@ -156,11 +249,15 @@
 .form__item {
   display: flex;
   align-items: center;
-  width: 100%;
-  margin-bottom: 14px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
 
   @media (min-width: $tablet) {
-    margin-bottom: 20px;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -177,12 +274,29 @@
     line-height: 30px;
   }
 
+  &--text {
+    margin-right: 13px;
+  }
+
   &--radio {
     color: $color-text-special;
   }
 
   &--checkbox {
     color: $color-text-main;
+  }
+}
+
+.form__textarea-container {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 631px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
   }
 }
 
@@ -196,6 +310,11 @@
   outline: 1px solid $color-border-secondary;
   min-height: 45px;
   min-width: 173px;
+
+  @media (min-width: $desktop) {
+    min-height: 52px;
+    padding: 10px 16px 10px 20px;
+  }
 
   &--textarea {
     width: 100%;
@@ -211,23 +330,22 @@
 }
 
 .form__button-wrapper {
-  padding: 0 20px 32px;
+  max-width: 280px;
+  margin: 0 auto;
   text-align: center;
 
   @media (min-width: $tablet) {
     display: flex;
     align-items: center;
-    margin-bottom: 72px;
-    padding: 0 70px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 82px;
-    padding: 0 110px;
+    max-width: unset;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .form__submit-button {
+  min-width: 280px;
+  min-height: 40px;
   margin-bottom: 21px;
   font-size: 16px;
   line-height: 20px;
@@ -240,7 +358,7 @@
 
   @media (min-width: $desktop) {
     min-width: 568px;
-    margin-right: 4px;
+    margin-right: 84px;
   }
 }
 

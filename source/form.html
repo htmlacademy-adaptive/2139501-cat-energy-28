@@ -9,36 +9,42 @@
   <body class="page__body">
 
     <header class="main-header">
-      <div class="main-header__container">
-        <a href="index.html" class="main-header__logo logo">
+      <a class="main-header__logo logo" href="index.html" >
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
           <img class="logo__image" src="img/icons/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+        </picture>
+        <picture>
           <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
-        </a>
-        <nav class="main-nav nav">
-          <div class="nav__container">
-            <button class="nav__toggle" type="button">
-              <span class="visually-hidden">Кнопка меню</span>
-            </button>
-            <ul class="nav__list menu">
-              <li class="menu__item">
-                <a class="menu__link" href="index.html">Главная</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="menu__item menu__item--current">
-                <a class="menu__link" href="#">Подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+        </picture>
+      </a>
+      <nav class="main-header__nav nav nav--closed "><!-- nav--no-js -->
+        <div class="nav__container">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Кнопка меню</span>
+          </button>
+          <ul class="nav__list menu">
+            <li class="nav__item menu__item menu__item--inner">
+              <a class="menu__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item menu__item menu__item--inner">
+              <a class=" menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="nav__item menu__item menu__item--inner">
+              <a class="menu__link menu__link--current" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="main-container">
       <section class="form-block">
         <div class="form-block__container">
-          <h1 class="title title--h1 form-block__title">Подбор программы</h1>
+          <div class="form-block__title-container">
+            <h1 class="title title--h1 form-block__title">Подбор программы</h1>
+          </div>
           <p class="text form-block__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         </div>
         <form class="form-block__form form" action="https://echo.htmlacademy.ru/" method="post">
@@ -57,7 +63,7 @@
                   <input class="form__control form__control--text" id="cat-weight" type="number" name="weight" placeholder="7" required>
                 </li>
                 <li class="form__item">
-                  <label class="form__label form__label--text" for="cat-age">Возраст (лет):*</label>
+                  <label class="form__label form__label--text" for="cat-age">Возраст&nbsp;(лет):</label>
                   <input class="form__control form__control--text" id="cat-age" type="number"  name="age" placeholder="7">
                 </li>
               </ul>
@@ -93,7 +99,11 @@
           </div>
 
           <div class="form__wrapper form__wrapper--contacts">
-            <h2 class="title title--h3 form__title">Контактные данные (владельца кота)</h2>
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--contacts">Контактные данные (владельца кота)</h2>
+              </div>
+            </div>
             <ul class="form__list form__list--contacts">
               <li class="form__item">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
@@ -107,56 +117,68 @@
           </div>
 
           <div class="form__wrapper form__wrapper--comment">
-            <h2 class="title title--h3 form__title form__title--comment">Комментарий</h2>
-            <textarea class="form__control form__control--textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--comment">Комментарий</h2>
+              </div>
+            </div>
+            <div class="form__textarea-container">
+              <textarea class="form__control form__control--textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </div>
 
           <div class="form__wrapper form__wrapper--checkbox">
-            <h2 class="title title--h3 form__title form__title--checkbox">Дополнительно</h2>
-            <ul class="form__list form__list--checkbox">
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Сахарозаменитель</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Питьевая вода">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Питьевая вода</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Молоко">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Молоко</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Витамины">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Витамины</span>
-                </label>
-              </li>
-            </ul>
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--checkbox">Дополнительно</h2>
+              </div>
+            </div>
+            <div class="form__list-container">
+              <div class="form__list-wrapper">
+                <ul class="form__list form__list--checkbox">
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Сахарозаменитель</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Питьевая вода">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Питьевая&nbsp;вода</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Молоко">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Молоко</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Витамины">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Витамины</span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="form__button-wrapper">
+                  <button class="button form__submit-button" type="submit">Отправить заявку</button>
+                  <span class="text form__notification">* — Обязательные поля</span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="form__button-wrapper">
-            <button class="button form__submit-button" type="submit">Отправить заявку</button>
-            <span class="text form__notification">* — Обязательные поля</span>
-          </div>
-
         </form>
       </section>
     </main>
 
     <footer class="page-footer footer">
       <div class="footer__container">
-        <section class="cooperation">
+        <section class="cooperation cooperation--inner">
           <div class="cooperation__container cooperation__container--inner">
             <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
             <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>

@@ -1,19 +1,21 @@
 .cooperation {
   width: 100%;
-}
-
-.cooperation__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 26px 20px;
   background-color: $color-bg-main;
 
   &--inner {
     background-color: $color-bg-secondary;
   }
+}
+
+.cooperation__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 26px 20px;
 
   @media (min-width: $tablet) {
+    max-width: unset;
     padding: 56px 70px;
   }
 
@@ -24,6 +26,12 @@
     padding: 56px 60px 56px 80px;
     left: 110px;
     z-index: 1;
+  }
+
+  &--inner {
+    @media (min-width: $desktop) {
+      background-color: $color-bg-main;
+    }
   }
 }
 

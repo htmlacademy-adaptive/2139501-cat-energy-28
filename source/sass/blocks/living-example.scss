@@ -1,11 +1,22 @@
-.living-example__container {
-  padding: 25px 20px 40px;
+.living-example {
+  width: 100%;
   background-color: $color-bg-additional;
+
+  @media (min-width: $tablet) {
+    background-color: $color-bg-main;
+  }
+}
+
+.living-example__container {
+  max-width: 320px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: auto 174px;
-    padding: 43px 30px 100px 31px;
+    max-width: unset;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop) {
@@ -110,6 +121,7 @@
     line-height: 14px;
     transform: translateX(-50%);
     white-space: nowrap;
+    background-color: $color-bg-main;
   }
 
   @media (min-width: $desktop) {

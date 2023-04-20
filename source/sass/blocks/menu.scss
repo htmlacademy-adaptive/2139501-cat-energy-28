@@ -1,39 +1,83 @@
 .menu {
   @include list-reset;
-  display: none;
+  position: absolute;
+  width: 100%;
+  top: 64px;
+  left: 0;
 
   @media (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    position: relative;
     width: 440px;
+    padding: 0;
+    top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 477px;
+    margin-left: auto;
+    column-gap: 7%;
   }
 }
 
 .menu__item {
-  @media (min-width: $tablet) {
-    padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 67px;
+  margin: 0;
+  z-index: 2;
+  border-bottom: 1px solid $color-border-additional;
+  background-color: $color-bg-main;
 
-    &--current {
-      border-bottom: 2px solid $color-border-special;
-    }
+  & :hover {
+    opacity: 0.6;
+  }
+
+  & :active {
+    opacity: 0.3;
+  }
+
+  & :focus-visible {
+    outline: 2px solid $color-border-focus;
+  }
+
+  @media (min-width: $tablet) {
+    border: none;
+    z-index: 1;
+    width: max-content;
   }
 
   @media (min-width: $desktop) {
-    padding-bottom: 10px;
+    color: $color-text-secondary;
+    background-color: inherit;
+  }
+}
+
+.menu:first-child {
+  border-top: 1px solid $color-border-additional;
+
+  @media (min-width: $tablet) {
+    border: none;
   }
 }
 
 .menu__link {
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-main;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
-  color: $color-text-main;
+  color: inherit;
   text-decoration: none;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
+    justify-content: space-between;
+    padding: 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -42,5 +86,41 @@
   @media (min-width: $desktop) {
     font-size: 20px;
     line-height: 30px;
+    color: $color-text-secondary;
+    background-color: inherit;
+  }
+}
+
+.menu__link--current {
+  cursor: default;
+  pointer-events: none;
+}
+
+.menu__link--current::after {
+  @media (min-width: $tablet) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 31px;
+    left: 0;
+    background-color: $color-bg-special;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $color-bg-main;
+    top: 35px;
+  }
+}
+
+.menu__item--inner .menu__link {
+  @media (min-width: $desktop) {
+    color: $color-text-main;
+  }
+}
+
+.menu__item--inner .menu__link--current::after {
+  @media (min-width: $desktop) {
+    background-color: $color-bg-special;
   }
 }
