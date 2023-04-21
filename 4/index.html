@@ -8,49 +8,52 @@
     <base href="https://htmlacademy-adaptive.github.io/2139501-cat-energy-28/4/">
 </head>
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__container">
-        <a href="index.html" class="main-header__logo logo">
-          <img class="logo__image" src="img/icons/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
-          <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
+    <div class="header-wrapper container">
+      <header class="main-header">
+        <a class="main-header__logo logo" href="index.html" >
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+            <img class="logo__image" src="img/icons/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+          </picture>
+          <picture>
+            <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
+          </picture>
         </a>
-        <nav class="main-nav nav">
+        <nav class="main-header__nav nav nav--closed "><!-- nav--no-js -->
           <div class="nav__container">
             <button class="nav__toggle" type="button">
               <span class="visually-hidden">Кнопка меню</span>
             </button>
             <ul class="nav__list menu">
-              <li class="menu__item menu__item--current">
-                <a class="menu__link" href="#">Главная</a>
+              <li class="nav__item menu__item">
+                <a class="menu__link menu__link--current" href="#">Главная</a>
               </li>
-              <li class="menu__item">
+              <li class="nav__item menu__item">
                 <a class="menu__link" href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="menu__item">
+              <li class="nav__item menu__item">
                 <a class="menu__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
         </nav>
-      </div>
-    </header>
+      </header>
+      <section class="entry">
+        <h1 class="title title--h1 entry__title">Функциональное<br> питание для котов</h1>
+        <p class="entry__text">Занялся собой? Займись котом!</p>
+        <picture>
+          <img class="entry__image" src="img/cat-energy-pro-mobile.png" alt="Функциональное питание для котов." width="280" height="270">
+        </picture>
+        <a class="entry__button button" href="form.html">Подобрать программу</a>
+      </section>
+    </div>
 
     <main class="main-container">
 
-      <section class="entry">
-        <div class="entry__container">
-          <h1 class="title title--h1 entry__title">Функциональное<br> питание для котов</h1>
-          <p class="entry__text">Занялся собой? Займись котом!</p>
-          <div class="entry__image-wrapper">
-            <img class="entry__image" src="img/cat-energy-pro-mobile.png" alt="Функциональное питание для котов." width="280" height="270">
-          </div>
-          <a class="entry__button button" href="form.html">Подобрать программу</a>
-        </div>
-      </section>
-
       <section class="main-services">
         <h2 class="visually-hidden">Выбор программы</h2>
-        <div class="main-services__container">
+        <div class="main-services__container container">
           <div class="main-services__item">
             <div class="main-services__icon-container">
               <svg class="main-services__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="36" height="50" fill="none" viewBox="0 0 36 50">
@@ -75,7 +78,7 @@
       </section>
 
       <section class="description">
-        <div class="description__container">
+        <div class="description__container container">
           <h2 class="title title--h2 description__title">Как это работает</h2>
           <ul class="description__list">
             <li class="text description__item">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -87,7 +90,7 @@
       </section>
 
       <section class="living-example">
-        <div class="living-example__container">
+        <div class="living-example__container container">
           <h2 class="title title--h2 living-example__title">Живой пример</h2>
           <p class="text living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="living-example__list">
@@ -120,7 +123,7 @@
       <div class="footer__container">
 
         <section class="cooperation">
-          <div class="cooperation__container">
+          <div class="cooperation__container container">
             <h2 class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
           </div>
