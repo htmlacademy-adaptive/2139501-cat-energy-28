@@ -14,9 +14,11 @@
   }
 
   @media (min-width: $desktop) {
+    width: 100%;
     background-image: url("../img/index-background-desktop.jpg");
-    background-position: top right calc(50% - 360px);
+    background-position: top right;
     background-repeat: no-repeat;
+    background-size: 50vw 694px;
 
     &::after {
       content: "";

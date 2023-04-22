@@ -13,13 +13,15 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 768px;
     padding: 55px 30px;
   }
 
   @media (min-width: $desktop) {
+    max-width: 1440px;
     padding: 66px 110px;
   }
 }

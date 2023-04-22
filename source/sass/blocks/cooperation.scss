@@ -5,6 +5,11 @@
   &--inner {
     background-color: $color-bg-secondary;
   }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    max-width: 1440px;
+  }
 }
 
 .cooperation__container {
@@ -15,23 +20,18 @@
   padding: 26px 20px;
 
   @media (min-width: $tablet) {
-    max-width: unset;
+    max-width: 768px;
     padding: 56px 70px;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     width: 565px;
-    margin-top: 95px;
     padding: 56px 60px 56px 80px;
-    left: 110px;
+    top: 95px;
+    margin-left: 110px;
+    background-color: $color-bg-main;
     z-index: 1;
-  }
-
-  &--inner {
-    @media (min-width: $desktop) {
-      background-color: $color-bg-main;
-    }
   }
 }
 

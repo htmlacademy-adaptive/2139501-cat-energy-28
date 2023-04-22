@@ -2,12 +2,15 @@
   @include list-reset;
   display: flex;
   width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
   padding: 20px 0;
   justify-content: center;
   border-top: 1px solid $color-border;
   border-bottom: 1px solid $color-border;
 
   @media (min-width: $tablet) {
+    max-width: unset;
     padding: 0;
     border: none;
   }
