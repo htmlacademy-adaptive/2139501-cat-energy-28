@@ -2,48 +2,59 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__container">
-        <a href="#" class="main-header__logo">
-          <img src="img/icons/logo-mobile.svg" alt="Cat energy." width="191" height="38">
+    <div class="header-wrapper container">
+      <header class="main-header">
+        <a class="main-header__logo logo" href="index.html" >
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+            <img class="logo__image" src="img/icons/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+          </picture>
+          <picture>
+            <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
+          </picture>
         </a>
-        <nav class="main-nav">
-          <div class="main-nav__container">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
+        <nav class="main-header__nav nav nav--closed "><!-- nav--no-js -->
+          <div class="nav__container">
+            <button class="nav__toggle" type="button">
+              <span class="visually-hidden">Кнопка меню</span>
             </button>
-            <ul class="main-nav__list menu">
-              <li class="menu__item menu__item--current">
-                <a class="menu__link" href="#">Главная</a>
+            <ul class="nav__list menu">
+              <li class="nav__item menu__item">
+                <a class="menu__link menu__link--current" href="#">Главная</a>
               </li>
-              <li class="menu__item">
+              <li class="nav__item menu__item">
                 <a class="menu__link" href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="menu__item">
+              <li class="nav__item menu__item">
                 <a class="menu__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
           </div>
         </nav>
-      </div>
-    </header>
-
-    <main class="main-container">
+      </header>
       <section class="entry">
-        <div class="entry__container">
-          <h1 class="title title--h1 entry__title">Функциональное питание для котов</h1>
+        <div class="entry__container container">
+          <h1 class="title title--h1 entry__title">Функциональное<br> питание для котов</h1>
           <p class="entry__text">Занялся собой? Займись котом!</p>
-          <img class="entry__image" src="img/cat-energy-pro-mobile.png" alt="Функциональное питание для котов." width="280" height="270">
+          <picture>
+            <img class="entry__image" src="img/cat-energy-pro-mobile.png" alt="Функциональное питание для котов." width="280" height="270">
+          </picture>
           <a class="entry__button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
+    </div>
+
+    <main class="main-container">
+
       <section class="main-services">
         <h2 class="visually-hidden">Выбор программы</h2>
-        <div class="main-services__container">
+        <div class="main-services__container container">
           <div class="main-services__item">
             <div class="main-services__icon-container">
               <svg class="main-services__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="36" height="50" fill="none" viewBox="0 0 36 50">
@@ -66,8 +77,9 @@
           </div>
         </div>
       </section>
+
       <section class="description">
-        <div class="description__container">
+        <div class="description__container container">
           <h2 class="title title--h2 description__title">Как это работает</h2>
           <ul class="description__list">
             <li class="text description__item">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -77,8 +89,9 @@
           </ul>
         </div>
       </section>
+
       <section class="living-example">
-        <div class="living-example__container">
+        <div class="living-example__container container">
           <h2 class="title title--h2 living-example__title">Живой пример</h2>
           <p class="text living-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="living-example__list">
@@ -91,7 +104,7 @@
               <span class="living-example__description">затрачено времени</span>
             </div>
           </div>
-          <p class="living-example__cost">Затраты на питание: 15 000 РУБ.</p>
+          <p class="living-example__cost">Затраты на питание: <span>15 000 РУБ.</span></p>
           <div class="living-example__slider slider">
             <ul class="slider__list">
               <li class="slider__item">
@@ -109,20 +122,29 @@
 
     <footer class="page-footer footer">
       <div class="footer__container">
+
         <section class="cooperation">
-          <div class="cooperation__container">
-            <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="cooperation__container container">
+            <h2 class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
           </div>
         </section>
+
         <section class="map">
           <h2 class="visually-hidden">Карта</h2>
-          <div class="map__wrapper"></div>
+          <div class="map__wrapper">
+            <iframe class="map__iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1160726408207!2d30.317857323536607!3d59.939475593588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1681412831212!5m2!1sru!2sru"
+              width="1440" height="400" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </iframe>
+          </div>
         </section>
+
         <div class="footer__social-wrapper">
           <a class="footer__logo" href="#">
             <img src="img/icons/footer-logo.svg" alt="Cat Energy." width="128" height="24">
           </a>
+
           <ul class="footer__social social">
             <li class="social__item social__item--vk">
               <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
@@ -149,8 +171,9 @@
               </a>
             </li>
           </ul>
+
           <div class="footer__academy academy">
-            <a class="academy__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="academy__link" href="https://htmlacademy.ru/">HTML&nbsp;Academy</a>
             <a class="academy__logo" href="https://htmlacademy.ru/" target="_blank">
               <span class="visually-hidden">Ссылка на сайт Академии</span>
               <svg class="academy__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none" viewBox="0 0 27 35">

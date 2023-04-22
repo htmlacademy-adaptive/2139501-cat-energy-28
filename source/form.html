@@ -2,91 +2,109 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи - Каталог</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
     <header class="main-header">
-      <div class="main-header__container">
-        <a href="index.html" class="main-header__logo">
-          <img src="img/icons/logo-mobile.svg" alt="Cat energy." width="191" height="38">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+      <a class="main-header__logo logo" href="index.html" >
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+          <img class="logo__image" src="img/icons/logo-mobile.svg" alt="Логотип Cat Energy." width="33" height="38">
+        </picture>
+        <picture>
+          <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
+        </picture>
+      </a>
+      <nav class="main-header__nav nav nav--closed "><!-- nav--no-js -->
+        <div class="nav__container">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Кнопка меню</span>
           </button>
-          <ul class="main-nav__list menu">
-            <li class="menu__item">
+          <ul class="nav__list menu">
+            <li class="nav__item menu__item menu__item--inner">
               <a class="menu__link" href="index.html">Главная</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="catalog.html">Каталог продукции</a>
+            <li class="nav__item menu__item menu__item--inner">
+              <a class=" menu__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="menu__item menu__item--current">
-              <a class="menu__link" href="#">Подбор программы</a>
+            <li class="nav__item menu__item menu__item--inner">
+              <a class="menu__link menu__link--current" href="#">Подбор программы</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
 
     <main class="main-container">
       <section class="form-block">
         <div class="form-block__container">
-          <h1 class="title title--h1 form-block__title">Подбор программы</h1>
-          <p class="text form-block__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <div class="form-block__title-container">
+            <h1 class="title title--h1 form-block__title">Подбор программы</h1>
+          </div>
+          <p class="text form-block__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
         </div>
         <form class="form-block__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-          <div class="form__wrapper form__wrapper--data">
-            <h2 class="visually-hidden">Информация о коте</h2>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-name">Имя:*</label>
-                <input class="form__control form__control--text" id="cat-name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
-                <input class="form__control form__control--text" id="cat-weight" type="number" name="weight" placeholder="7" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--text" for="cat-age">Возраст (лет):*</label>
-                <input class="form__control form__control--text" id="cat-age" type="number"  name="age" placeholder="7">
-              </li>
-            </ul>
-          </div>
+          <div class="form__container">
 
-          <div class="form__wrapper form__wrapper--target">
-            <h2 class="visually-hidden">Цель программы</h2>
-            <ul class="form__list form__list--target">
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Похудение" checked>
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Похудение</span>
-                </label>
-              </li>
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Набор массы">
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Набор массы</span>
-                </label>
-              </li>
-              <li class="form__field form__field--radio">
-                <label class="form__label form__label--radio">
-                  <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
-                  <span class="form__mark form__mark--radio"></span>
-                  <span class="form__description">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
+            <div class="form__wrapper form__wrapper--data">
+              <h2 class="visually-hidden">Информация о коте</h2>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-name">Имя:*</label>
+                  <input class="form__control form__control--text" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-weight">Вес (кг):*</label>
+                  <input class="form__control form__control--text" id="cat-weight" type="number" name="weight" placeholder="7" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="cat-age">Возраст&nbsp;(лет):</label>
+                  <input class="form__control form__control--text" id="cat-age" type="number"  name="age" placeholder="7">
+                </li>
+              </ul>
+            </div>
+
+            <div class="form__wrapper form__wrapper--target">
+              <h2 class="visually-hidden">Цель программы</h2>
+              <ul class="form__list form__list--target">
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Похудение" checked>
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Похудение</span>
+                  </label>
+                </li>
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Набор массы">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__field form__field--radio">
+                  <label class="form__label form__label--radio">
+                    <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span class="form__description">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
           </div>
 
           <div class="form__wrapper form__wrapper--contacts">
-            <h2 class="title title--h3 form__title">Контактные данные (владельца кота)</h2>
-            <ul class="form__list">
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--contacts">Контактные данные (владельца кота)</h2>
+              </div>
+            </div>
+            <ul class="form__list form__list--contacts">
               <li class="form__item">
                 <label class="form__label form__label--text" for="email">E-mail:*</label>
                 <input class="form__control form__control--text" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
@@ -99,56 +117,68 @@
           </div>
 
           <div class="form__wrapper form__wrapper--comment">
-            <h2 class="title title--h3 form__title form__title--comment">Комментарий</h2>
-            <textarea class="form__control form__control--textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--comment">Комментарий</h2>
+              </div>
+            </div>
+            <div class="form__textarea-container">
+              <textarea class="form__control form__control--textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </div>
 
           <div class="form__wrapper form__wrapper--checkbox">
-            <h2 class="title title--h3 form__title form__title--checkbox">Дополнительно</h2>
-            <ul class="form__list">
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Сахарозаменитель</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Питьевая вода">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Питьевая вода</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Молоко">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Молоко</span>
-                </label>
-              </li>
-              <li class="form__field form__field--checkbox">
-                <label class="form__label form__label--checkbox">
-                  <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Витамины">
-                  <span class="form__mark form__mark--checkbox"></span>
-                  <span class="form__description">Витамины</span>
-                </label>
-              </li>
-            </ul>
+            <div class="form__title-wrapper">
+              <div class="form__title-container">
+                <h2 class="title title--h3 form__title form__title--checkbox">Дополнительно</h2>
+              </div>
+            </div>
+            <div class="form__list-container">
+              <div class="form__list-wrapper">
+                <ul class="form__list form__list--checkbox">
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Сахарозаменитель</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Питьевая вода">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Питьевая&nbsp;вода</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Молоко">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Молоко</span>
+                    </label>
+                  </li>
+                  <li class="form__field form__field--checkbox">
+                    <label class="form__label form__label--checkbox">
+                      <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Витамины">
+                      <span class="form__mark form__mark--checkbox"></span>
+                      <span class="form__description">Витамины</span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="form__button-wrapper">
+                  <button class="button form__submit-button" type="submit">Отправить заявку</button>
+                  <span class="text form__notification">* — Обязательные поля</span>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="form__button-wrapper">
-            <button class="button form__submit-button" type="submit">Отправить заявку</button>
-            <span class="text form__notification">* — Обязательные поля</span>
-          </div>
-
         </form>
       </section>
     </main>
 
     <footer class="page-footer footer">
       <div class="footer__container">
-        <section class="cooperation">
+        <section class="cooperation cooperation--inner">
           <div class="cooperation__container">
             <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
             <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -156,7 +186,12 @@
         </section>
         <section class="map">
           <h2 class="visually-hidden">Карта</h2>
-          <div class="map__wrapper"></div>
+          <div class="map__wrapper">
+            <iframe class="map__iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1160726408207!2d30.317857323536607!3d59.939475593588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1681412831212!5m2!1sru!2sru"
+              width="1440" height="400" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </iframe>
+          </div>
         </section>
         <div class="footer__social-wrapper">
           <a class="footer__logo" href="#">
@@ -189,7 +224,7 @@
             </li>
           </ul>
           <div class="footer__academy academy">
-            <a class="academy__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="academy__link" href="https://htmlacademy.ru/">HTML&nbsp;Academy</a>
             <a class="academy__logo" href="https://htmlacademy.ru/" target="_blank">
               <span class="visually-hidden">Ссылка на сайт Академии</span>
               <svg class="academy__icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none" viewBox="0 0 27 35">

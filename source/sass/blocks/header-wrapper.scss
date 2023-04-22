@@ -1,0 +1,33 @@
+.header-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+  overflow: hidden;
+  min-width: 320px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    background-image: none;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    background-image: url("../img/index-background-desktop.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 50vw 694px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50vw;
+      min-height: 695px;
+      top: 0;
+      left: 50%;
+      background-color: rgba($color-bg-special, 0.85);
+    }
+  }
+}

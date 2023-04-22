@@ -1,15 +1,16 @@
 .button {
-  display: block;
-  width: 100%;
-  padding: 7px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
   color: $color-text-secondary;
   text-transform: uppercase;
-  text-decoration: none;
-  font-family: $font-main;
-  background-color: $color-bg-special;
   border: none;
+  background-color: $color-bg-special;
+  outline: transparent;
+  text-decoration: none;
+  cursor: pointer;
 }
