@@ -1,40 +1,38 @@
 .main-header {
-  min-height: 66px;
   position: relative;
-  padding-top: 12px;
   display: flex;
   flex-wrap: wrap;
   width: 320px;
+  min-height: 65px;
   margin: 0 auto;
+  padding-top: 9px;
 
   @media (min-width: $tablet) {
-    padding: 0;
     width: 768px;
     margin: 0 auto;
+    padding: 0;
   }
 
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-columns: repeat(2, 48%);
-    column-gap: 4%;
+    grid-template-columns: repeat(2, 50%);
     width: 1440px;
     margin-top: 54px;
   }
 }
 
 .main-header__logo {
+  margin-left: 20px;
   z-index: 1;
-  width: calc(50% + 34px);
-  margin-left: 6%;
 
   @media (min-width: $tablet) {
     width: 174px;
-    margin-left: 30px;
+    margin-left: 31px;
   }
 
   @media (min-width: $desktop) {
     width: 202px;
-    margin-left: calc(17% - 8px);
+    margin-left: 110px;
     margin-right: auto;
   }
 }
@@ -50,7 +48,7 @@
   }
 
   @media (min-width: $desktop) {
-    width: 50%;
-    margin-right: calc(22% - 4px);
+    min-width: 478px;
+    margin-right: 110px;
   }
 }
