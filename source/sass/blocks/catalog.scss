@@ -10,13 +10,13 @@
   @media (min-width: $tablet) {
     width: 768px;
     margin: 0 auto;
-    padding: 65px 30px 68px;
+    padding: 51px 30px 44px;
     border: none;
   }
 
   @media (min-width: $desktop) {
     width: 1440px;
-    padding: 78px 110px 75px;
+    padding: 68px 110px 51px;
   }
 }
 
@@ -30,7 +30,7 @@
 
 .catalog__title {
   width: 280px;
-  margin: 0 auto 41px;
+  margin: 0 auto 40px;
   color: $color-text-main;
   text-align: left;
 
@@ -38,6 +38,10 @@
     width: 100%;
     margin-left: 0;
     margin-bottom: 163px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 167px;
   }
 }
 

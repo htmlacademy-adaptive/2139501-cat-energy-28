@@ -1,6 +1,10 @@
 .more-products {
   width: 100%;
-  padding-top: 25px;
+  padding-top: 35px;
+
+  @media (min-width: $tablet) {
+    padding-top: 39px;
+  }
 }
 
 .more-products__container {
@@ -12,7 +16,7 @@
 
   @media (min-width: $tablet) {
     max-width: unset;
-    padding: 0 30px 76px;
+    padding: 0 30px 77px;
   }
 
   @media (min-width: $desktop) {
@@ -24,6 +28,7 @@
 }
 
 .more-products__title-wrapper {
+  margin-top: 5px;
   border-top: 2px solid $color-border-special;
 }
 
@@ -33,24 +38,25 @@
 
   @media (min-width: $tablet) {
     max-width: 768px;
-    padding: 0 0 76px;
+    margin-top: 0;
+    padding: 0 30px 60px;
   }
 
   @media (min-width: $desktop) {
     max-width: 1440px;
-    padding: 0 0 86px;
+    padding: 0 0 60px;
   }
 }
 
 .more-products__title {
   position: relative;
   display: inline-block;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
   padding-left: 20px;
   padding-right: 21px;
   line-height: 24px;
   background-color: $color-bg-main;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
@@ -69,7 +75,7 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
   }
 
   @media (min-width: $desktop) {
@@ -79,7 +85,7 @@
 }
 
 .more-products__item {
-  padding: 13px 0 19px;
+  padding: 14px 0 18px;
   border-top: 1px solid $color-border-secondary;
 
   @media (min-width: $tablet) {
@@ -95,7 +101,7 @@
     display: grid;
     grid-template-columns: 32% 32% 27%;
     column-gap: 4.5%;
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
     align-items: center;
     border: none;
     border-top: 1px solid $color-border-secondary;
@@ -114,7 +120,7 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $desktop) {
@@ -152,16 +158,17 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet) {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
     justify-content: space-between;
-    margin-bottom: 0;
+    margin-top: 3px;
   }
 }
 
@@ -169,16 +176,20 @@
   line-height: 14px;
 
   @media (min-width: $tablet) {
-    text-align: right;
     line-height: 20px;
+    text-align: right;
 
     &:last-of-type {
       min-width: 42px;
     }
 
     &:not(:last-of-type) {
-      margin-right: 49px;
+      margin-right: 51px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
   }
 }
 
@@ -224,10 +235,6 @@
   }
 
   @media (min-width: $tablet) {
-    min-width: 707px;
-    min-height: 200px;
-    justify-content: flex-start;
-
     &::before {
       background-image: url("../img/gift-tablet.jpg");
       min-width: 707px;

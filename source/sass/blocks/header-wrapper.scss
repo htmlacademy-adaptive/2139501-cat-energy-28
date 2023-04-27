@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 0;
   overflow: hidden;
   min-width: 320px;
@@ -15,19 +15,18 @@
 
   @media (min-width: $desktop) {
     width: 100%;
-    background-image: url("../img/index-background-desktop.jpg");
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 50vw 694px;
 
     &::after {
       content: "";
       position: absolute;
-      width: 50vw;
+      width: 50%;
       min-height: 695px;
       top: 0;
       left: 50%;
-      background-color: rgba($color-bg-special, 0.85);
+      background-image: url("../img/background-desktop.jpg"), url("../img/index-background-desktop.jpg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }

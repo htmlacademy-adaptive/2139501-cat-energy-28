@@ -17,17 +17,17 @@
   justify-content: space-between;
   margin: 0 auto;
   max-width: 320px;
-  padding: 26px 20px;
+  padding: 26px 18px 25px 21px;
 
   @media (min-width: $tablet) {
     max-width: 768px;
-    padding: 56px 70px;
+    padding: 60px 70px;
   }
 
   @media (min-width: $desktop) {
     position: absolute;
     width: 565px;
-    padding: 56px 60px 56px 80px;
+    padding: 59px 60px 56px 80px;
     top: 95px;
     margin-left: 110px;
     background-color: $color-bg-main;
@@ -36,7 +36,7 @@
 }
 
 .cooperation__title {
-  margin: 0 15px 0 0;
+  margin: 0 17px 0 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -60,6 +60,20 @@
     justify-content: space-between;
     max-width: 160px;
     min-height: 80px;
+    margin-top: -5px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: flex-start;
+    max-width: 175px;
+    text-align: left;
+  }
+}
+
+.cooperation__location-text {
+  @media (min-width: $desktop) {
+    display: block;
+    margin-top: 20px;
   }
 }

@@ -19,7 +19,7 @@
           <img class="logo__text" src="img/icons/logo-mobile-text.svg" alt="Текст логотипа Cat Energy." width="101" height="18">
         </picture>
       </a>
-      <nav class="main-header__nav nav nav--closed "><!-- nav--no-js -->
+      <nav class="main-header__nav nav nav--closed nav--no-js">
         <div class="nav__container">
           <button class="nav__toggle" type="button">
             <span class="visually-hidden">Кнопка меню</span>
@@ -75,21 +75,18 @@
                 <li class="form__field form__field--radio">
                   <label class="form__label form__label--radio">
                     <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Похудение" checked>
-                    <span class="form__mark form__mark--radio"></span>
                     <span class="form__description">Похудение</span>
                   </label>
                 </li>
                 <li class="form__field form__field--radio">
                   <label class="form__label form__label--radio">
                     <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Набор массы">
-                    <span class="form__mark form__mark--radio"></span>
                     <span class="form__description">Набор массы</span>
                   </label>
                 </li>
                 <li class="form__field form__field--radio">
                   <label class="form__label form__label--radio">
                     <input class="form__control form__control--radio visually-hidden" type="radio" name="program" value="Не знаю (Нужен ваш совет)">
-                    <span class="form__mark form__mark--radio"></span>
                     <span class="form__description">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </li>
@@ -105,13 +102,13 @@
               </div>
             </div>
             <ul class="form__list form__list--contacts">
-              <li class="form__item">
-                <label class="form__label form__label--text" for="email">E-mail:*</label>
-                <input class="form__control form__control--text" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+              <li class="form__item form__item--contacts">
+                <label class="form__label form__label--text form__label--contacts" for="email">E-mail:*</label>
+                <input class="form__control form__control--contacts" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
               </li>
-              <li class="form__item">
-                <label class="form__label form__label--text" for="phone">Телефон:*</label>
-                <input class="form__control form__control--text" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+              <li class="form__item form__item--contacts form__item--mail">
+                <label class="form__label form__label--text form__label--contacts" for="phone">Телефон:*</label>
+                <input class="form__control form__control--contacts" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </div>
@@ -139,29 +136,25 @@
                   <li class="form__field form__field--checkbox">
                     <label class="form__label form__label--checkbox">
                       <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Сахарозаменитель" checked>
-                      <span class="form__mark form__mark--checkbox"></span>
-                      <span class="form__description">Сахарозаменитель</span>
+                      <span class="form__description form__description--checkbox">Сахарозаменитель</span>
                     </label>
                   </li>
                   <li class="form__field form__field--checkbox">
                     <label class="form__label form__label--checkbox">
                       <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Питьевая вода">
-                      <span class="form__mark form__mark--checkbox"></span>
-                      <span class="form__description">Питьевая&nbsp;вода</span>
+                      <span class="form__description form__description--checkbox">Питьевая&nbsp;вода</span>
                     </label>
                   </li>
                   <li class="form__field form__field--checkbox">
                     <label class="form__label form__label--checkbox">
                       <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Молоко">
-                      <span class="form__mark form__mark--checkbox"></span>
-                      <span class="form__description">Молоко</span>
+                      <span class="form__description form__description--checkbox">Молоко</span>
                     </label>
                   </li>
                   <li class="form__field form__field--checkbox">
                     <label class="form__label form__label--checkbox">
                       <input class="form__control form__control--checkbox visually-hidden" type="checkbox" name="additionally" value="Витамины">
-                      <span class="form__mark form__mark--checkbox"></span>
-                      <span class="form__description">Витамины</span>
+                      <span class="form__description form__description--checkbox">Витамины</span>
                     </label>
                   </li>
                 </ul>
@@ -180,8 +173,8 @@
       <div class="footer__container">
         <section class="cooperation cooperation--inner">
           <div class="cooperation__container">
-            <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <h2 class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <p class="text cooperation__text">ул. Большая Конюшенная, д. 19/8 <span class="cooperation__location-text">Санкт-Петербург</span></p>
           </div>
         </section>
         <section class="map">
@@ -191,11 +184,18 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.1160726408207!2d30.317857323536607!3d59.939475593588824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1681412831212!5m2!1sru!2sru"
               width="1440" height="400" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
             </iframe>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/icons/map-tablet.png">
+              <img class="map__icon" src="img/icons/map-mobile.png" width="57" height="53" alt="Указатель на карте.">
+            </picture>
           </div>
         </section>
         <div class="footer__social-wrapper">
           <a class="footer__logo" href="#">
-            <img src="img/icons/footer-logo.svg" alt="Cat Energy." width="128" height="24">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/icons/footer-logo-tablet.svg">
+              <img class="footer__logo-icon" src="img/icons/footer-logo.svg" alt="Cat Energy." width="128" height="24">
+            </picture>
           </a>
           <ul class="footer__social social">
             <li class="social__item social__item--vk">
@@ -235,6 +235,6 @@
         </div>
       </div>
     </footer>
-
+    <script src="./js/script.js"></script>
   </body>
 </html>

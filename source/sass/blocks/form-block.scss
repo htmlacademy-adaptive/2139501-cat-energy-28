@@ -3,12 +3,12 @@
   border-top: 1px solid $color-border;
 
   @media (min-width: $tablet) {
-    padding-top: 65px;
+    padding-top: 51px;
     border-top: none;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 77px;
+    padding-top: 67px;
   }
 }
 
