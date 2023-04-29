@@ -23,10 +23,14 @@
       min-height: 695px;
       top: 0;
       left: 50%;
-      background-image: url("../img/background-desktop.jpg"), url("../img/index-background-desktop.jpg");
+      background-image: url("../img/index-background-desktop.jpg");
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop-2x.jpg");
+      }
     }
   }
 }

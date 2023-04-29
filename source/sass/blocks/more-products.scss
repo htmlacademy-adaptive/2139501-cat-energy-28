@@ -219,6 +219,10 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-2x.jpg");
+    }
   }
 
   &::after {
@@ -239,6 +243,10 @@
       background-image: url("../img/gift-tablet.jpg");
       min-width: 707px;
       min-height: 200px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/gift-tablet-2x.jpg");
+      }
     }
 
     &::after {
@@ -259,6 +267,10 @@
       background-position: 50% 50%;
       min-width: 20.5%;
       min-height: 289px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/gift-desktop-2x.jpg");
+      }
     }
 
     &::after {
