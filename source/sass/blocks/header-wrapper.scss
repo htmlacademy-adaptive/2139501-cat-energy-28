@@ -27,6 +27,10 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop-2x.jpg");
+      }
     }
   }
 }
