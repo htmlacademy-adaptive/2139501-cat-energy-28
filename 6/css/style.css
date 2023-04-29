@@ -179,6 +179,11 @@
     background-size: cover;
   }
 }
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .header-wrapper::after {
+    background-image: url("../img/index-background-desktop-2x.jpg");
+  }
+}
 
 .main-header {
   position: relative;
