@@ -97,27 +97,35 @@
     color: $color-text-secondary;
     background-color: inherit;
   }
-}
 
-.menu__link--current {
-  cursor: default;
-  pointer-events: none;
-}
+  &--current {
+    cursor: default;
+    pointer-events: none;
 
-.menu__link--current::after {
-  @media (min-width: $tablet) {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 32px;
-    left: 0;
-    background-color: $color-bg-special;
+    &::after {
+      @media (min-width: $tablet) {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -40%;
+        left: 0;
+        background-color: $color-bg-special;
+      }
+
+      @media (min-width: $desktop) {
+        background-color: $color-bg-main;
+        top: 35px;
+      }
+    }
   }
 
-  @media (min-width: $desktop) {
-    background-color: $color-bg-main;
-    top: 35px;
+  &--current-inner {
+    &::after {
+      @media (min-width: $tablet) {
+        bottom: -28%;
+      }
+    }
   }
 }
 

@@ -31,4 +31,19 @@
 .social__link {
   display: flex;
   text-decoration: none;
+  color: $color-button-special;
+
+  &:hover .social__icon {
+    color: $color-bg-special;
+    fill: $color-bg-special;
+  }
+
+  &:active .social__icon {
+    color: rgba($color-bg-special, 0.3);
+    fill: rgba($color-bg-special, 0.3);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 }

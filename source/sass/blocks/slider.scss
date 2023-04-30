@@ -10,6 +10,7 @@
   }
 
   @media (min-width: $desktop) {
+    align-self: flex-end;
     width: 560px;
     margin-top: 0;
     padding: 0;
@@ -22,6 +23,7 @@
   padding: 0;
   top: 0;
   left: calc(50% - 20px);
+  color: $color-button-special;
   cursor: pointer;
   border: none;
   background-color: inherit;
