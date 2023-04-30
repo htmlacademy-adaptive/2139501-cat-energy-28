@@ -61,7 +61,7 @@
 .main-services__icon-container {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: start;
   grid-row: 1;
   grid-column: 1;
@@ -87,7 +87,7 @@
     &::before {
       width: 200px;
       height: 200px;
-      top: -4px;
+      top: 15px;
       left: 0;
     }
   }
@@ -200,10 +200,21 @@
     content: "";
     position: relative;
     display: block;
-    width: 24px;
+    min-width: 24px;
     height: 12px;
     margin-left: 15px;
-    background-image: url("../img/icons/icon_arrow.svg");
+    background-image: url("../img/icons/icon-arrow.svg");
+  }
+
+  &:hover {
+    &::after {
+      min-width: 32px;
+      background-image: url("../img/icons/icon-arrow-hover.svg");
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
@@ -216,5 +227,9 @@
     &::after {
       margin-left: 25px;
     }
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1/3;
   }
 }

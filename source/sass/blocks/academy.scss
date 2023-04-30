@@ -6,6 +6,21 @@
   margin: 0 auto;
   padding-top: 20px;
 
+  &:hover .academy__icon {
+    color: $color-bg-special;
+    fill: $color-bg-special;
+  }
+
+  &:active .academy__link,
+  &:active .academy__icon {
+    color: rgba($color-bg-special, 0.3);
+    fill: rgba($color-bg-special, 0.3);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
   @media (min-width: $tablet) {
     justify-content: flex-end;
     padding: 0;
@@ -23,6 +38,8 @@
 }
 
 .academy__logo {
+  color: $color-button-special;
+
   @media (min-width: $tablet) {
     margin-left: 28px;
   }

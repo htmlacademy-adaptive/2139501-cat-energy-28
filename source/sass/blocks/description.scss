@@ -53,7 +53,8 @@
 
   @media (min-width: $desktop) {
     display: flex;
-    gap: 75px;
+    flex-wrap: wrap;
+    gap: 81px;
   }
 }
 
@@ -148,7 +149,8 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 250px;
+    width: 20%;
+    max-width: unset;
 
     &::after {
       right: 0;

@@ -6,9 +6,11 @@ $font-secondary: "Lato", "Arial", sans-serif;
 $color-bg-main: #ffffff;
 $color-bg-secondary: #f2f2f2;
 $color-bg-additional: #eaeaea;
+$color-bg-additional-hover: #ebebeb;
 $color-bg-special: #68b738;
 $color-bg-active: #5eaa2f;
 $color-bg-icon: #d3d3d3;
+$color-bg-form-focus: #bababa;
 
 $color-text-main: #000000;
 $color-text-secondary: #ffffff;
@@ -25,6 +27,9 @@ $color-border-main: #ffffff;
 $color-border-card: #f2f2f2;
 $color-border-form: #e7e7e7;
 $color-border-focus: #444444;
+$color-border-error: #ff8282;
+
+$color-button-special: #666666;
 
 //Ширина экрана
 $tablet: 768px;

@@ -5,6 +5,19 @@
   pointer-events: none;
   text-decoration: none;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
   @media (min-width: $tablet) {
     display: block;
     min-height: 52px;
