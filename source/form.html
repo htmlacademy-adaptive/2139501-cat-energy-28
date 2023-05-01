@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи - Каталог</title>
     <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -195,8 +198,8 @@
               width="1440" height="400" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
             </iframe>
             <picture>
-              <source media="(min-width: 768px)" srcset="img/icons/map-tablet.webp 1x, img/icons/map-tablet-2x.webp 2x">
-              <source srcset="img/icons/map-mobile.webp 1x, img/icons/map-mobile-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/icons/map-tablet.webp 1x, img/icons/map-tablet-2x.webp 2x">
+              <source type="image/webp" srcset="img/icons/map-mobile.webp 1x, img/icons/map-mobile-2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/icons/map-tablet.png 1x, img/icons/map-tablet-2x.png 2x">
               <img class="map__icon" src="img/icons/map-mobile.png" srcset="img/icons/map-mobile-2x.png 2x" width="57" height="53" alt="Указатель на карте.">
             </picture>
