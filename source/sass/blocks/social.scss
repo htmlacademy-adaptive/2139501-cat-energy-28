@@ -44,6 +44,8 @@
   }
 
   &:focus-visible {
+    color: $color-bg-special;
+    fill: $color-bg-special;
     outline: none;
   }
 }

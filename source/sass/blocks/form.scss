@@ -619,8 +619,8 @@
   }
 }
 
-input::placeholder,
-textarea::placeholder,
+.form__control--text::placeholder,
+.form__control--textarea::placeholder,
 .form__control {
   font-family: $font-main;
   font-size: 16px;
