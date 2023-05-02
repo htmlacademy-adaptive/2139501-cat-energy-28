@@ -40,6 +40,12 @@
 .academy__logo {
   color: $color-button-special;
 
+  &:focus-visible {
+    color: $color-bg-special;
+    fill: $color-bg-special;
+    outline: none;
+  }
+
   @media (min-width: $tablet) {
     margin-left: 28px;
   }
@@ -47,4 +53,9 @@
 
 .academy__icon {
   display: flex;
+
+  &:focus-visible {
+    color: $color-bg-special;
+    fill: $color-bg-special;
+  }
 }
